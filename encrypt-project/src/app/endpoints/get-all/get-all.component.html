@@ -1,0 +1,23 @@
+<div class="container">
+    <button type="button" (click)="doGetAll()">Ver</button>
+</div>
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Valor</th>
+                <th>Secreto</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let secret of secrets">
+                <td>{{secret.id_table}}</td>
+                <td>{{secret.valor1}}</td>
+                <td>{{secret.valor2}}</td>
+                <td>{{secret.valor3}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

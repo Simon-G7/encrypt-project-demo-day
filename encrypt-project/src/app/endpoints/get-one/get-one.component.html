@@ -1,0 +1,30 @@
+<h1>_______BIENVENIDO______</h1>
+<p>Inserte su contraseña: </p>
+<input type="password" [(ngModel)]="password">
+<br>
+<p>Inserte el ID a buscar: </p>
+<input type="text" [(ngModel)]="id">
+<br>
+<div class="container">
+    <button type="button" (click)="doGetOne()">Descubrir</button>
+</div>
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>V1</th>
+                <th>V2</th>
+                <th>V3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{secret.id_table}}</td>
+                <td>{{secret.value1}}</td>
+                <td>{{secret.value2}}</td>
+                <td>{{secret.value3}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

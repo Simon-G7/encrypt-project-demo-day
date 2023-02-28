@@ -1,0 +1,15 @@
+<h1>BIENVENIDO a MySecrets</h1>
+<div [hidden]="!authenticated()">
+	<button (click)="doGetAll()">Visualizar Registros</button>
+	<button (click)="doGetOne()">Visualizar Registro por ID</button>
+	<button (click)="doInsert()">Insertar Registro</button>
+</div>
+<br>
+<div [hidden]="!getAdmin() || !authenticated()">
+	<button (click)="doUpdate()">Actualizar Registro</button>
+	<button (click)="doDelete()">Eliminar Registro</button>
+
+</div>
+<div [hidden]="authenticated()">
+	<p>Login to see your secrets</p>
+</div>

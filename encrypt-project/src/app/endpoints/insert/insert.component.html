@@ -1,0 +1,32 @@
+<h1>_______BIENVENIDO______</h1>
+<h3>Listo para confiarme un secreto?</h3>
+<br>
+<p>Inserte la contraseña asociada a su secreto: </p>
+<input type="password" [(ngModel)]="password">
+<br>
+<p>Inserte el nombre del registro: </p>
+<input type="text" [(ngModel)]="name">
+<br>
+<p>Inserte un numero: </p>
+<input type="text" [(ngModel)]="numero">
+<br>
+<p>Escriba su secreto: </p>
+<input type="text" [(ngModel)]="secret">
+<br>
+<div class="container">
+    <button type="button" (click)="doInsert()" onclick="this.disabled = true">Insertar</button>
+</div>
+<div [hidden]="!inserted()" class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Resultado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{result.response}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
