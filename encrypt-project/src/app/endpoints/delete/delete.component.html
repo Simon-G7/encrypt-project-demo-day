@@ -1,1 +1,22 @@
-<p>delete works!</p>
+<h1>_______BIENVENIDO ADMIN______</h1>
+<br>
+<p>Inserte el ID a eliminar: </p>
+<input type="text" [(ngModel)]="id">
+<br>
+<div class="container">
+    <button type="button" (click)="doDelete()">Eliminar</button>
+</div>
+<div [hidden]="!deleted()" class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Resultado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{secret.response}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
